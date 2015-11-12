@@ -1,0 +1,13 @@
+# src/Esiea/BlogBundle/Resources/config/routing.yml
+
+#esiea_blog_homepage:
+#    path:     /hello/{name}
+#    defaults: { _controller: EsieaBlogBundle:Default:index }
+
+hello_the_world:
+    path:     /hello-world
+    defaults: {_controller: EsieaBlogBundle:Advert:index }
+
+byebye_the_world:
+    path:     /byebye-world
+    defaults: {_controller: EsieaBlogBundle:Advert:indexEnd }

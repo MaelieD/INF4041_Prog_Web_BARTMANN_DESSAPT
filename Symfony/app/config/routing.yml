@@ -1,0 +1,3 @@
+esiea_blog:
+    resource: "@EsieaBlogBundle/Resources/config/routing.yml"
+    prefix:   /
