@@ -1,0 +1,27 @@
+{# src/Esiea/BlogBundle/Resources/views/Advert/edit.html.twig #}
+
+{% extends "EsieaBlogBundle::layout.html.twig" %}
+
+{% block title %}
+  Modifier un post - {{ parent() }}
+{% endblock %}
+
+{% block esieablog_body %}
+
+  <h2>Modifier un post</h2>
+
+  {{ include("EsieaBlogBundle:Advert:form.html.twig") }}
+
+  <p>
+    Vous éditez un post déjà existant, merci de ne pas changer
+    l'esprit générale du post déjà publié.
+  </p>
+
+  <p>
+    <a href="{{ path('esiea_blog_view', {'id': advert.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour au post
+    </a>
+  </p>
+
+{% endblock %}

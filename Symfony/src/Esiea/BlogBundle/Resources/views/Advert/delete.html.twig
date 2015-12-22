@@ -1,0 +1,26 @@
+{# src/Esiea/BlogBundle/Resources/views/Advert/delete.html.twig #}
+
+{% extends "EsieaBlogBundle::layout.html.twig" %}
+
+{% block title %}
+  Supprimer un post - {{ parent() }}
+{% endblock %}
+
+{% block esieablog_body %}
+
+  <h2>Supprimer un post</h2>
+
+  {{ include("EsieaBlogBundle:Advert:form.html.twig") }}
+
+  <p>
+    Attention : Vous êtes sur le point de supprimer un post définitivement !
+  </p>
+
+  <p>
+    <a href="{{ path('esiea_blog_home') }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à l'accueil
+    </a>
+  </p>
+
+{% endblock %}
