@@ -1,0 +1,16 @@
+{# src/Esiea/BlogBundle/Resources/views/Advert/add.html.twig #}
+
+{% extends "EsieaBlogBundle::layout.html.twig" %}
+
+{% block body %}
+
+  <h2>Poster quelque chose !</h2>
+
+  {{ include("EsieaBlogBundle:Advert:form.html.twig") }}
+
+  <p>
+    Attention : ce post sera ajouté directement
+    sur la page d'accueil après validation du formulaire.
+  </p>
+
+{% endblock %}
