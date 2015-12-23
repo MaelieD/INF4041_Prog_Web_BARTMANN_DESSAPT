@@ -1,0 +1,44 @@
+# src/Esiea/BlogBundle/Resources/config/routing.yml
+
+#esiea_blog_homepage:
+#    path:     /hello/{name}
+#    defaults: { _controller: EsieaBlogBundle:Default:index }
+
+esiea_blog_home: # page d'accueil + liste des posts récents
+    path:      /{page}
+    defaults:  
+        _controller: EsieaBlogBundle:Advert:index
+        page : 1
+    requirements:
+        page: \d*
+
+esiea_blog_view: # visualiser un post et ses commentaires
+    path:      /advert/{id}
+    defaults:  { _controller: EsieaBlogBundle:Advert:view }
+    requirements:
+        id: \d+
+
+esiea_blog_view_slug:
+    path:      /{year}/{slug}.{format}
+    defaults:  
+        _controller: EsieaBlogBundle:Advert:viewSlug
+        _format: html
+    requirements:
+        year:   \d{4}
+        _format: html|xml
+
+esiea_blog_add: # ajouter, modifier, supprimer un post
+    path:      /add
+    defaults:  { _controller: EsieaBlogBundle:Advert:add }
+
+esiea_blog_edit:
+    path:       /edit/{id}
+    defaults:   { _controller: EsieaBlogBundle:Advert:edit }
+    requirements :
+        id: \d+
+
+esiea_blog_delete:
+    path:        /{id}
+    defaults:    { _controller: EsieaBlogBundle:Advert:delete }
+    requirements:
+        id: \d+
